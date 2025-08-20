@@ -1,5 +1,9 @@
+hostnamectl set-hostname master & worker
+
+vi /etc/hosts - setup master & worker ip address add
+
 #!/bin/bash
-setenforce 0
+ setenforce 0
   sed -i --follow-symlinks 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
 
  sudo yum update -y
