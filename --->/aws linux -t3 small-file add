@@ -59,3 +59,15 @@ enabled=1
 gpgcheck=0
 EOF
 
+
+ swapoff -a
+echo '1' > /proc/sys/net/bridge/bridge-nf-call-iptables
+modprobe br_netfilter
+modprobe nf_nat
+modprobe xt_REDIRECT
+modprobe xt_owner
+modprobe iptable_nat
+modprobe iptable_mangle
+modprobe iptable_filter
+
+
